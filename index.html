@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleix Kambou - Portfolio</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2em; /* Adjust as needed */
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            background: linear-gradient(to right, rgb(68, 2, 68), rgb(0, 0, 0));
+                /* Other styles */
+        }
+
+        #profile-picture {
+            width: 20%; /* Adjust as needed */
+            height: auto;
+            position: absolute; /* Add this */
+            left: -300px; /* Adjust as needed */
+            top: 50%; /* Add this */
+            transform: translateY(-50%); /* Add this */
+            border-radius: 50%; /* Make the image circular */
+            border: 2px solid #fb00ff; /* Add a white border */
+        }
+        h1{
+            font-size: 2.5em; /* Adjust as needed */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end) forwards;
+        }
+
+        #about-me, #picture {
+            margin-top: 150px; /* Adjust as needed */
+            display: flex;
+            border: 2px solid #00eeff; /* Add a border */
+            padding: 20px; /* Add some padding */
+            border-radius: 5px; /* Optional: add rounded corners */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            margin: 0 auto; /* Center the element */
+            position: relative; /* Add this */
+        }
+
+        p {
+            font-size: 1.4em; /* Adjust as needed */
+            text-align: left;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: black; }
+        }
+
+        #animated-header {
+            overflow: hidden;
+            border-right: .15em solid black;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end) forwards,
+                blink .75s step-end infinite;
+            width: 0;
+            min-width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            color: #00fbff;
+        }
+
+        .project {
+            display: none;
+            /* Other styles */
+        }
+
+        .project p {
+            margin-bottom: 10px;
+        }
+        #skills-container {
+        margin-top: -300px; /* Adjust as needed */
+        display: flex;
+        flex-direction: column; /* Change this */
+        border: 2px solid #00eeff; /* Add a border */
+        padding: 20px; /* Add some padding */
+        border-radius: 10px; /* Optional: add rounded corners */
+        width: 20%; /* Adjust as needed */
+        height: 10%; /* Adjust as needed */
+        margin-left: 1200px; /* Aligns the section to the left */
+        position: relative; /* Add this */
+}
+        #project-container {
+            margin-top: 20px; /* Adjust as needed */
+            display: flex;
+            border: 2px solid #00eeff; /* Add a border */
+            padding: 20px; /* Add some padding */
+            border-radius: 10px; /* Optional: add rounded corners */
+            width: 60%; /* Adjust as needed */
+            height: 80%; /* Adjust as needed */
+            margin-right: auto; /* Change this */
+            position: relative; /* Add this */
+        }
+
+
+        .nav-arrows {
+            position: absolute;
+            bottom: 130px; /* Adjust this */
+            left: 30px; /* Adjust this */
+            display: flex;
+            justify-content: space-between; /* Change this */
+            flex-direction: row; /* Change this */
+            width: 100px; /* Add this */
+        }
+
+        .nav-arrows a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 5px; /* Add this */
+        }
+
+        .nav-arrows a:hover {
+            background-color: #666;
+        }
+        .footer {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            font-size: 0.8em; /* Adjust as needed */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aleix Kambou</h1>
+
+    </header>
+
+    <div id="about-me">
+        <div id="profile-picture-container">
+            <img id="profile-picture" src="images/pfp.png" alt="Profile Picture">
+        </div>
+        <div id="about-me-text">
+            <h2>About Me</h2>
+            Hey! I'm a 20-year-old programming enthusiast at 42 Barcelona, focusing on mastering C while exploring the exciting realms of cybersecurity. Beyond programming, I love diving into IT fields like hardware, web development, networking, and operating systems (Windows, Linux, macOS). With a foundation in C, Python, Git, and HTML, I'm driven by curiosity and a passion for learning. Let's navigate the tech landscape together! 🚀
+        </div>
+    </div>
+
+
+
+    <section>
+    <h2>Projects</h2>
+    <div id="project-container">
+        <div class="project">
+            <h3>Project 1: LIBFT</h3>
+            <p>
+            <strong>Description:</strong> Reinforced programming fundamentals by replicating C library functions and creating custom functions for variable handling, arithmetic operations, and array manipulation.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/libft" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2: ft_printf</h3>
+            <p>
+            <strong>Description:</strong> Created a custom implementation of the printf function in C, introducing a variety of format specifiers and exploring the use of the va_arg macros for variable arguments.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/printf" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 3: Born2beRoot</h3>
+            <p>
+            <strong>Description:</strong> Developed a system administration project that involved setting up a virtual machine, enforcing strict system rules, and using technologies like SELinux or AppArmor.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 4: Get_Next_Line</h3>
+            <p>
+            <strong>Description:</strong> Developed a function to read content line by line from a file descriptor, enhancing understanding of static variables, file descriptors, and buffer management in C.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/get_next_line" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 5: Push_Swap</h3>
+            <p>
+            <strong>Description:</strong> Created a custom sorting algorithm using the radix algorithm with bit shifting and a bubble sort, serving as an introduction to algorithm development.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/push_swap" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 6: Pipex</h3>
+            <p>
+            <strong>Description:</strong> Developed a program to understand shell concepts such as pipe handling, environment variables, and binaries execution, with a bonus part handling multiple pipes.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/pipex" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 7: Fract-ol</h3>
+            <p>
+            <strong>Description:</strong> Created fractals and displayed them in a window using Xlib, enhancing understanding of graphical interface applications and imaginary numbers.
+            </p>
+            <p>
+                <strong></strong> <a href="https://github.com/alkmb/fract-ol" target="_blank"><img src="images/github-logo.png" alt="GitHub" width="30" height="30"></a>
+            </p>
+        </div>
+    </div>
+    <div class="nav-arrows">
+        <a id="prev-project" href="#">Previous</a>
+        <a id="next-project" href="#">Next</a>
+    </div>
+    <div id="skills-container">
+        <h2>Skills</h2>
+        <!-- List your skills here -->
+        <p>C, HTML, Python</p>
+        <p>Git, Linux, Bash</p>
+
+
+        <!-- Add more as needed -->
+    </div>
+    </section>
+
+    <script>
+        var projects = Array.from(document.getElementsByClassName('project'));
+        var currentProjectIndex = 0;
+
+        // Show the first project by default
+        projects[currentProjectIndex].style.display = 'block';
+
+        document.getElementById('prev-project').addEventListener('click', function(e) {
+            e.preventDefault();
+            projects[currentProjectIndex].style.display = 'none';
+            currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+            projects[currentProjectIndex].style.display = 'block';
+        });
+
+        document.getElementById('next-project').addEventListener('click', function(e) {
+            e.preventDefault();
+            projects[currentProjectIndex].style.display = 'none';
+            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+            projects[currentProjectIndex].style.display = 'block';
+        });
+
+        // Call showProjects once to display the first project when the page loads
+        showProjects();
+    </script>
+
+    <div class="footer">
+        <p>&copy; 2024 Aleix Kambou</p>
+    </div>
+</body>
+</html>
