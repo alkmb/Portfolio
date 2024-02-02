@@ -12,7 +12,7 @@ header {
 	position: relative;
 	padding: 20px;
 	margin-left: 100px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 
 #profile-picture {
@@ -75,9 +75,8 @@ header {
 
 .skills-container {
 	position: relative;
-	left: 60%;
-	margin-top : 130px;
-	right: 30%;
+	left: 7%;
+	margin-top : 530px;
 	bottom: 500px; /* Adjust this as needed */
 }
 
