@@ -1,0 +1,195 @@
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-image: url('images/background.png');
+	background-size: cover;
+	background-position: center;
+}
+
+header {
+
+	text-align: left;
+	position: relative;
+	padding: 20px;
+	margin-left: 100px;
+	margin-bottom: 30px;
+}
+
+#profile-picture {
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	border: 5px solid #333;
+	display: block;
+	margin: 100 left;
+}
+
+
+.buttonCV img {
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.buttonCV {
+	position: relative;
+	transform: translateY(-50%);
+	background-color: #008CBA; /* Change this to your preferred color */
+	color: white; /* Change this to your preferred color */
+	padding: 20px 20px;
+	border: 1px solid #00d9ff;
+	border-radius: 50px;
+	border-color: #000000;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: background-color 0.3s ease;
+}
+
+.buttonCV:hover {
+	background-color: #005F7F; /* Change this to your preferred color */
+	animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+	0% {
+		text-shadow: none;
+	}
+	20% {
+		text-shadow: -2px 0 blue, 2px 0 red;
+	}
+	40% {
+		text-shadow: -2px 0 red, 2px 0 blue;
+	}
+	60% {
+		text-shadow: -2px 0 blue, 2px 0 red;
+	}
+	80% {
+		text-shadow: -2px 0 red, 2px 0 blue;
+	}
+	100% {
+		text-shadow: none;
+	}
+}
+
+.skills-container {
+	position: relative;
+	left: 60%;
+	margin-top : 130px;
+	right: 30%;
+	bottom: 500px; /* Adjust this as needed */
+}
+
+.skills-container h2 {
+	color: #ffffff; /* Change this to your preferred color */
+}
+
+.skills-container h2, .skills-container h3 {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.skills-container h3 {
+	color: #ffffff; /* Change this to your preferred color */
+}
+.skills img {
+	width: 46px; /* Adjust this as needed */
+	height: 50px; /* Adjust this as needed */
+	margin-right: 10px;
+}
+
+.learning img {
+	width: 46px; /* Adjust this as needed */
+	height: 50px; /* Adjust this as needed */
+	margin-right: 10px;
+}
+
+h1 {
+	font-size: 70px;
+	color: rgb(255, 255, 255);
+	animation: glitch 1s infinite;
+}
+
+h2 {
+	color: #000000;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#about-me, #contact {
+	padding: 20px;
+    background: linear-gradient(to right, rgb(0, 187, 229), rgb(119, 34, 119));
+	border: 50px;
+	border-color: #000000;
+	margin-bottom: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.project-container {
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.header, .button, #about-me, #contact {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.button {
+	display: inline-block;
+	background-color: #750a4a; /* Change this to your preferred color */
+	color: white;
+	padding: 20px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 2px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #730468; /* Change as needed */
+    color: white; /* Change as needed */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+	background-color: #00035f; /* Darker shade of the original color */
+}
+.home-button:hover {
+	background-color: #020329; /* Darker shade of the original color */
+}
+
+.project-container {
+	position: relative;
+	left: 5%;
+	margin-right: 200px;
+    background: linear-gradient(to left, pink, rgb(119, 34, 119));
+	border: 1px solid #000; /* This adds a border around the container */
+	padding: 20px; /* This adds some space between the border and the content */
+}
+
+.project {
+	border: 1px solid #000; /* This adds a border around each project */
+	margin-bottom: 20px; /* This adds some space between projects */
+	padding: 20px; /* This adds some space between the border and the project content */
+}
+
+.project img {
+	width: 40px; /* Adjust as needed */
+	height: auto; /* This will maintain the aspect ratio */
+}
+
+footer {
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
