@@ -1,18 +1,23 @@
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
-	background-image: url('images/background.png');
-	background-size: cover;
-	background-position: center;
+	background-color: rgba(0, 0, 0, 1); /* This will add a semi-transparent black overlay */
+	position: relative; /* Add this line */
+	min-height: 100vh; /* Add this line */
 }
 
-header {
-
-	text-align: left;
-	position: relative;
-	padding: 20px;
-	margin-left: 100px;
-	margin-bottom: 0px;
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("images/background.jpg");
+	background-size: cover;
+	background-position: center;
+	filter: blur(20px); /* Adjust the pixel value as needed */
+	z-index: -1;
 }
 
 #profile-picture {
@@ -22,34 +27,36 @@ header {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	border: 5px solid #333;
 	display: block;
-	margin: 100 left;
+	margin: 0 auto; /* This will center the image */
 }
 
-
-.buttonCV img {
-	height: 20px;
-	width: 20px;
-	margin-right: 5px;
-	vertical-align: middle;
+#about-me {
+	padding: 100px;
+	background: transparent;
+	margin-bottom: 120px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: -450px;
+	color: white;
 }
 
-.buttonCV {
+#contact {
+	padding: 10px;
+	background: transparent;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 100px;
+	margin-top: -400px;
+	color: white;
+}
+
+header {
+
+	text-align: left;
 	position: relative;
-	transform: translateY(-50%);
-	background-color: #008CBA; /* Change this to your preferred color */
-	color: white; /* Change this to your preferred color */
-	padding: 20px 20px;
-	border: 1px solid #00d9ff;
-	border-radius: 50px;
-	border-color: #000000;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: background-color 0.3s ease;
-}
-
-.buttonCV:hover {
-	background-color: #005F7F; /* Change this to your preferred color */
-	animation: glitch 1s infinite;
+	padding: 20px;
+	margin-left: 100px;
+	margin-bottom: 0px;
 }
 
 @keyframes glitch {
@@ -73,10 +80,37 @@ header {
 	}
 }
 
+.buttonCV img {
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.buttonCV {
+	transform: translateY(-50%);
+	background-color: #008CBA; /* Change this to your preferred color */
+	color: white; /* Change this to your preferred color */
+	padding: 20px 20px;
+	border: 1px solid #00d9ff;
+	border-radius: 50px;
+	border-color: #000000;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: background-color 0.3s ease;
+	margin: 0px;
+}
+
+.buttonCV:hover {
+	background-color: #005F7F; /* Change this to your preferred color */
+	animation: glitch 1s infinite;
+}
+
+
 .skills-container {
 	position: relative;
-	left: 7%;
-	margin-top : 530px;
+	left: 75%;
+	margin-top : 300px;
 	bottom: 500px; /* Adjust this as needed */
 }
 
@@ -110,31 +144,13 @@ h1 {
 }
 
 h2 {
-	color: #000000;
+	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#about-me, #contact {
-	padding: 20px;
-    background: linear-gradient(to right, rgb(0, 187, 229), rgb(119, 34, 119));
-	border: 50px;
-	border-color: #000000;
-	margin-bottom: 20px;
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
-.project-container {
-	box-shadow: inset 0 0 10px #000000;
-}
-
-.header, .button, #about-me, #contact {
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
 .button {
-	display: inline-block;
-	background-color: #750a4a; /* Change this to your preferred color */
+	display: flex;
+	background-color: #0a1a75; /* Change this to your preferred color */
 	color: white;
 	padding: 20px 20px;
 	text-align: center;
@@ -142,15 +158,58 @@ h2 {
 	font-size: 16px;
 	margin: 10px 2px;
 	cursor: pointer;
+	justify-content: center;
 	border: none;
 	border-radius: 4px;
 	transition: background-color 0.3s ease;
 }
 
 .home-button {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #3f0202; /* Change as needed */
+    color: white; /* Change as needed */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 50px 400px ;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 4px;	
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover, .home-button:hover, prev:hover, next:hover {
+	background-color: #4b0000; /* Darker shade of the original color */
+}
+
+.project {
+	padding-left: 200px;
+	padding-right: 200px;
+	color: white; /* Add this line */
+}
+
+.project h3 {
+	text-align: center;
+}
+
+.github-logo {
+	filter: invert(1); /* This will make the logo white */
+	width: 30px; /* Adjust this as needed */
+	height: 30px; /* Adjust this as needed */
+}
+
+#button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#prev, #next {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #730468; /* Change as needed */
+    background-color: #3f0202; /* Change as needed */
     color: white; /* Change as needed */
     text-align: center;
     text-decoration: none;
@@ -158,33 +217,6 @@ h2 {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
-}
-
-.button:hover {
-	background-color: #00035f; /* Darker shade of the original color */
-}
-.home-button:hover {
-	background-color: #020329; /* Darker shade of the original color */
-}
-
-.project-container {
-	position: relative;
-	left: 5%;
-	margin-right: 200px;
-    background: linear-gradient(to left, pink, rgb(119, 34, 119));
-	border: 1px solid #000; /* This adds a border around the container */
-	padding: 20px; /* This adds some space between the border and the content */
-}
-
-.project {
-	border: 1px solid #000; /* This adds a border around each project */
-	margin-bottom: 20px; /* This adds some space between projects */
-	padding: 20px; /* This adds some space between the border and the project content */
-}
-
-.project img {
-	width: 40px; /* Adjust as needed */
-	height: auto; /* This will maintain the aspect ratio */
 }
 
 footer {
