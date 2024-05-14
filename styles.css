@@ -1,9 +1,23 @@
 body {
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	background-color: rgba(0, 0, 0, 1); /* This will add a semi-transparent black overlay */
-	position: relative; /* Add this line */
-	min-height: 100vh; /* Add this line */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+    min-height: 100vh;
+    font-size: 2em; /* Add this line */
+}
+
+@media (max-width: 800px) {
+    #about-me, #contact, .skills {
+        font-size: 1.5em;
+    }
+}
+
+/* When the viewport is 500px or less, decrease the font size further */
+@media (max-width: 800px) {
+    #about-me , #contact, .skills{
+        font-size: 0.7em;
+    }
 }
 
 body::before {
@@ -16,13 +30,13 @@ body::before {
 	background: url("images/background.jpg");
 	background-size: cover;
 	background-position: center;
-	filter: blur(20px); /* Adjust the pixel value as needed */
+	filter: blur(10px); /* Adjust the pixel value as needed */
 	z-index: -1;
 }
 
 #profile-picture {
-	width: 350px;
-	height: 350px;
+	max-width: 100%;
+	height: auto;
 	border-radius: 50%;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	border: 5px solid #333;
@@ -31,33 +45,47 @@ body::before {
 }
 
 #about-me {
-	padding: 100px;
+	padding-top: 1em; /* Adjust this value as needed */
+	padding-bottom: 3em;
 	background: transparent;
-	margin-bottom: 120px;
-	margin-left: 100px;
-	margin-right: 100px;
-	margin-top: -450px;
+	margin-bottom: 0em; /* Adjust this value as needed */
+	margin-left: 6em;
+	margin-right: 6em;
 	color: white;
 }
 
 #contact {
-	padding: 10px;
+	padding-left: 6em;
+	padding-right: 6em;
+	padding-bottom: 6em;
 	background: transparent;
-	margin-bottom: 0px;
-	margin-left: 10px;
-	margin-right: 100px;
-	margin-top: -400px;
+	margin-bottom: 0;
+	margin-left: 0.6em;
+	margin-right: 6em;
 	color: white;
 }
 
-header {
-
-	text-align: left;
-	position: relative;
-	padding: 20px;
-	margin-left: 100px;
-	margin-bottom: 0px;
+.skills {
+	padding-left: 6em;
+	background: transparent;
+	margin-bottom: 0;
+	margin-right: 6em;
+	color: white;
 }
+
+.skills img {
+	width: 50px;
+	height: 50px; 
+}
+
+
+header {
+	text-align: left;
+    position: relative;
+    padding: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 0;
+}rgin-bottom: 0px;
 
 @keyframes glitch {
 	0% {
@@ -80,21 +108,55 @@ header {
 	}
 }
 
+h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0; /* This reduces the space below the h1 */
+}
+
+h3 {
+	font-size: 20px;
+	margin-top: 0; /* This reduces the space above the h3 */
+	color: rgb(179, 16, 124);
+}
+
+h4 {
+	font-size: 70px;
+	margin-top: 0; /* This reduces the space above the h3 */
+	color: rgb(60, 253, 179);
+}
+h2 {
+	font-size: 30px;
+	color: rgb(60, 253, 179);
+	text-shadow: #000000;
+}
+
+@media (max-width: 600px) {
+	h1 {
+		display: none;
+	}
+	h4 {
+		display: none;
+	}
+}
+
+#contact img {
+	width: 50px; /* Adjust as needed */
+	height: auto; /* This maintains the aspect ratio of the image */
+}
+
 .buttonCV img {
 	height: 20px;
 	width: 20px;
-	margin-right: 5px;
-	vertical-align: middle;
+	filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(270deg);
 }
 
 .buttonCV {
 	transform: translateY(-50%);
-	background-color: #008CBA; /* Change this to your preferred color */
+	background-color: #610061; /* Change this to your preferred color */
 	color: white; /* Change this to your preferred color */
-	padding: 20px 20px;
-	border: 1px solid #00d9ff;
-	border-radius: 50px;
-	border-color: #000000;
+	border: 1px solid #448e9b00;
+	border-radius: 10px;
 	text-decoration: none;
 	font-size: 1.2em;
 	transition: background-color 0.3s ease;
@@ -106,118 +168,84 @@ header {
 	animation: glitch 1s infinite;
 }
 
-
-.skills-container {
-	position: relative;
-	left: 75%;
-	margin-top : 300px;
-	bottom: 500px; /* Adjust this as needed */
+/* Default button styles */
+.button, .buttonCV{
+	padding: 10px 30px;
+	font-size: 28px;
 }
 
-.skills-container h2 {
-	color: #ffffff; /* Change this to your preferred color */
-}
-
-.skills-container h2, .skills-container h3 {
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.skills-container h3 {
-	color: #ffffff; /* Change this to your preferred color */
-}
-.skills img {
-	width: 46px; /* Adjust this as needed */
-	height: 50px; /* Adjust this as needed */
-	margin-right: 10px;
-}
-
-.learning img {
-	width: 46px; /* Adjust this as needed */
-	height: 50px; /* Adjust this as needed */
-	margin-right: 10px;
-}
-
-h1 {
-	font-size: 70px;
-	color: rgb(255, 255, 255);
-	animation: glitch 1s infinite;
-}
-
-h2 {
-	color: #ffffff;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.button {
-	display: flex;
-	background-color: #0a1a75; /* Change this to your preferred color */
-	color: white;
-	padding: 20px 20px;
-	text-align: center;
+.button{
+	transform: translateY(-50%);
+	background-color: #610061; /* Change this to your preferred color */
+	color: white; /* Change this to your preferred color */
+	border: 1px solid #530546;
+	border-radius: 10px;
+	border-color: #000000;
 	text-decoration: none;
-	font-size: 16px;
-	margin: 10px 2px;
-	cursor: pointer;
-	justify-content: center;
-	border: none;
-	border-radius: 4px;
+	font-size: 1.2em;
 	transition: background-color 0.3s ease;
 }
 
-.home-button {
-    display: flex;
-    padding: 10px 20px;
-    background-color: #3f0202; /* Change as needed */
-    color: white; /* Change as needed */
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 50px 400px ;
-	justify-content: center;
-	cursor: pointer;
-	border-radius: 4px;	
-    cursor: pointer;
-    border-radius: 4px;
+.button img{
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
 }
 
-.button:hover, .home-button:hover, prev:hover, next:hover {
-	background-color: #4b0000; /* Darker shade of the original color */
+.button:hover {
+	background-color: #005F7F; /* Change this to your preferred color */
+	animation: glitch 1s infinite;
 }
+
+
+/* Responsive styles for screens smaller than 600px */
+@media (max-width: 600px) {
+	.button, .buttonCV, #prev, #next {
+		padding: 5px 10px;
+		font-size: 14px;
+	}
+}
+
 
 .project {
-	padding-left: 200px;
-	padding-right: 200px;
-	color: white; /* Add this line */
+	position: relative;
+	flex: 1 0 21%; /* This will make each box take up approximately 1/4 of the container width, adjust as needed */
+	box-sizing: border-box;
+	margin: 10%;
+	padding: 10%;
+	background-color: #181142; /* This makes the background grey */
+	color: #ffffff; /* This makes the text white */
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	font-size: 14px; /* This makes the text smaller. Adjust as needed */
 }
 
-.project h3 {
-	text-align: center;
+
+.github-logo{
+	width: 40px; /* This makes the logo smaller. Adjust as needed */
+	height: auto; /* This maintains the aspect ratio of the logo */
 }
 
-.github-logo {
-	filter: invert(1); /* This will make the logo white */
-	width: 30px; /* Adjust this as needed */
-	height: 30px; /* Adjust this as needed */
+.github-logo:hover {
+	filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(270deg);
 }
 
-#button-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+.responsive-video {
+	width: 30%;
+	height: auto;
 }
 
-#prev, #next {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3f0202; /* Change as needed */
-    color: white; /* Change as needed */
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
+@media (min-width: 600px) {
+	.responsive-video {
+		width: 100%;
+	}
 }
+
+@media (min-width: 900px) {
+	.responsive-video {
+		width: 100%;
+	}
+}
+
 
 footer {
 	color: white;
