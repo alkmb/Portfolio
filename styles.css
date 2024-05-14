@@ -82,8 +82,9 @@ body::before {
 header {
 	text-align: left;
     position: relative;
-    padding: 0.5em;
-    margin-left: 0em;
+    padding-top: 2em;
+    margin-left: 1em;
+	margin-right: 1em;
     margin-bottom: 0;
 }
 
@@ -174,6 +175,26 @@ h2 {
 	font-size: 28px;
 }
 
+.home-button {
+	margin-left: 2em;
+	transform: translateY(-50%);
+	background-color: #610061; /* Change this to your preferred color */
+	color: white; /* Change this to your preferred color */
+	border: 1px solid #530546;
+	border-radius: 10px;
+	border-color: #000000;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: background-color 0.3s ease;
+	padding: 10px 30px;
+	font-size: 28px;
+}
+
+.home-button:hover {
+	background-color: #005F7F; /* Change this to your preferred color */
+	animation: glitch 1s infinite;
+}
+
 .button{
 	transform: translateY(-50%);
 	background-color: #610061; /* Change this to your preferred color */
@@ -195,6 +216,22 @@ h2 {
 .button:hover {
 	background-color: #005F7F; /* Change this to your preferred color */
 	animation: glitch 1s infinite;
+}
+
+.language-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #00be8f; /* Change to desired color */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100px;
+	font-size: 0.6em;
+    transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+    background-color: #001d5c; /* Change to desired hover color */
 }
 
 

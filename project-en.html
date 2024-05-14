@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aleix Kambou - Projects</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.project-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.project {
+			flex: 1 0 21%; /* This will make each box take up approximately 1/4 of the container width, adjust as needed */
+			box-sizing: border-box;
+			margin: 1%;
+			padding: 1%;
+			border: 1px solid #000;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+    <a href="project.html" class="language-button">ES</a>
+	<header>
+		<h1>Projects</h1>
+	</header>
+	<main>
+        <a href="english.html" class="home-button"> Go to Home</a>
+		<div class="project-container">
+			<div class="project">
+				<h3>1 - Libft (Library of functions in C)</h3>
+				<p>
+                    Libft is a library with C functions 
+                    (some are modified implementations of existing functions)
+                    that offers essential functionalities, such as memory manipulation,
+                    type conversion, string manipulation, list operations, and more.
+				</p>
+				<a href="https://github.com/alkmb/libft" target="_blank">
+					<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+				</a>
+			</div>
+			<div class="project">
+				<h3>2 - ft_printf (printf copy)</h3>
+				<p>
+                    The ft_printf project is a simplified replica of the original printf 
+                    function in C. The main focus is to create a compact but 
+                    robust utility that handles a limited set of format specifiers: 
+                    %c, %s, %d, %i, %u, %p, %x, and %X.
+				</p>
+				<a href="https://github.com/alkmb/printf" target="_blank">
+					<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+					
+				</a>			
+			</div>
+			<div class="project">
+				<h3>3 - Get_next_line (Memory managment)</h3>
+				<p>
+                    This project is about reading
+                    and storing lines from a file into a buffer in C. The main goal
+                    is to acquire competence in memory allocation and release,
+                    avoiding memory leaks while providing a
+                    flexible and reliable solution for file input handling.
+					<p>
+						<a href="https://github.com/alkmb/get_next_line" target="_blank">
+							<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+							
+						</a>			
+			</div>
+			<div class="project">
+				<h3>4 - Push_swap (Sorting algorithm)</h3>
+				<p>
+                    The Push Swap project presents a sorting algorithm to organize
+                    numbers in ascending order using two stacks. The challenge lies in the
+                    custom implementation of the radix sort algorithm to achieve
+                    the desired final order.
+				</p>
+				<a href="https://github.com/alkmb/push_swap" target="_blank">
+					<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+					
+				</a>
+			</div>
+			<div class="project">
+				<video class="responsive-video" controls>
+					<source src="images/pipex.webm" type="video/webm">
+					Your browser does not support the video tag.
+				</video>
+                    <h3>5 - Pipex (Implementation of pipes with file descriptors)</h3>
+                    <p>
+                        The Pipex project introduces a shell implementation
+                        of pipes that involves two files and two commands. The main goal
+                        is to create a pipe between the commands, where the output of the first command
+                        serves as input for the second command.
+                    </p>
+				<a href="https://github.com/alkmb/pipex" target="_blank">
+					<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+
+				</a>
+			</div>
+			<div class="project">
+			<video class="responsive-video" controls>
+				<source src="images/fractol.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+                <h3>6 - Fract-ol (Fractal in graphical interface)</h3>
+                <p>
+                    The project serves as an introduction to the Xlib library, which provides
+                    graphical interfaces in C. The mathematical operations involved in working
+                    with real and imaginary numbers to create fractal sets offer
+                    an immersive learning experience.
+                </p>
+			<a href="https://github.com/alkmb/fract-ol" target="_blank">
+				<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+				
+			</a>
+		</div>
+		<div class="project">
+			<video class="responsive-video" controls>
+				<source src="images/philo.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+                <h3>7 - Philosophers (Dining Philosophers Problem)</h3>
+                <p>
+                    The Philosophers project is an implementation of the classic
+                    Dining Philosophers Problem. It serves as an introduction to multithreading
+                    and mutex optimization, providing a practical scenario to understand
+                    and solve synchronization problems in concurrent programming.
+                </p>
+			<a href="https://github.com/alkmb/philos" target="_blank">
+				<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+			</a>
+		</div>
+		<div class="project">
+			<video class="responsive-video" controls>
+				<source src="images/minishell.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+                <h3>8 - Minishell (Bash Implementation in C)</h3>
+                <p>
+                    Minishell is a bash implementation in C.
+                    It offers a deep insight into object-oriented programming
+                    and PID management. It provides knowledge about how bash works,
+                    including file descriptor redirection,
+                    pipe implementation, exit status management,
+                    and input parsing for different symbols.
+                </p>
+			<a href="https://github.com/alkmb/minishell" target="_blank">
+				<img class="github-logo" src="images/github-logo.png" alt="View Code on GitHub">
+			</a>
+		</div>
+	</main>
+</body>
+</html>
