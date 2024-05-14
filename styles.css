@@ -66,10 +66,10 @@ body::before {
 }
 
 .skills {
-	padding-left: 6em;
+	padding-left: 3em;
 	background: transparent;
 	margin-bottom: 0;
-	margin-right: 6em;
+	margin-right: 3em;
 	color: white;
 }
 
