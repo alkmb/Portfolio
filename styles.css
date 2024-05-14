@@ -49,19 +49,19 @@ body::before {
 	padding-bottom: 3em;
 	background: transparent;
 	margin-bottom: 0em; /* Adjust this value as needed */
-	margin-left: 6em;
-	margin-right: 6em;
+	margin-left: 3em;
+	margin-right: 3em;
 	color: white;
 }
 
 #contact {
-	padding-left: 6em;
-	padding-right: 6em;
+	padding-left: 3em;
+	padding-right: 3em;
 	padding-bottom: 6em;
 	background: transparent;
 	margin-bottom: 0;
 	margin-left: 0.6em;
-	margin-right: 6em;
+	margin-right: 3em;
 	color: white;
 }
 
