@@ -254,9 +254,14 @@ h2 {
 	color: #ffffff; /* This makes the text white */
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	font-size: 14px; /* This makes the text smaller. Adjust as needed */
+	border-radius: 10px; /* Rounded corners */
 }
 
-
+.project:hover {
+	background-color: #009688; /* New background color on hover */
+	transform: scale(1.03); /* Keep the scale transformation for a subtle effect */
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Keep the enhanced shadow for depth */
+}
 .github-logo{
 	width: 40px; /* This makes the logo smaller. Adjust as needed */
 	height: auto; /* This maintains the aspect ratio of the logo */
