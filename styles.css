@@ -20,6 +20,13 @@ body {
     }
 }
 
+/* Responsive styles for screens smaller than 600px */
+@media (max-width: 600px) {
+	.button, .buttonCV, #prev, #next {
+		padding: 5px 10px;
+		font-size: 14px;
+	}
+}
 body::before {
 	content: "";
 	position: absolute;
@@ -44,48 +51,349 @@ body::before {
 	margin: 0 auto; /* This will center the image */
 }
 
+/*###################################################### ABOUT ME #######################################*/
 #about-me {
 	padding-top: 1em; /* Adjust this value as needed */
-	padding-bottom: 3em;
+	padding-bottom: 1em;
 	background: transparent;
 	margin-bottom: 0em; /* Adjust this value as needed */
-	margin-left: 3em;
-	margin-right: 3em;
+	margin-left: 1em;
+	margin-right: 1em;
 	color: white;
 }
 
-#contact {
-	padding-left: 3em;
-	padding-right: 3em;
-	padding-bottom: 6em;
-	background: transparent;
-	margin-bottom: 0;
-	margin-left: 0.6em;
-	margin-right: 3em;
-	color: white;
+/* Default layout */
+.about-me-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+/* Responsive layout for smaller screens */
+@media (max-width: 800px) {
+    .about-me-wrapper {
+        flex-direction: column;
+    }
+    .terminal {
+        order: 2;
+		padding-top: 10px; /* Move the terminal to the bottom */
+    }
+}
+
+.terminal {
+    display: flex;
+	padding-left: 10px;
+    flex-direction: column;
+    width: 100%;
+	height: 100%;
+}
+
+.terminal_toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+	margin-bottom: -5px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #212121;
+    justify-content: space-between;
+}
+
+.terminal_body {
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 10px;
+    font-size: 24px;
+	margin-top:-1px;
+	margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 5px;
+}
+
+.terminal_promt {
+    display: flex;
+}
+
+
+.terminal_user {
+    color: #ff00d4;
+}
+
+.terminal_location {
+    color: #4878c0;
+}
+
+.terminal_bling {
+    color: #dddddd;
+}
+
+.terminal_cursor {
+    display: block;
+    height: 24px;
+    width: 10px;
+    margin-top: 7px;
+    margin-left: 10px;
+    animation: curbl 1200ms linear infinite;
+}
+
+
+.butt {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 5px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 100%;
+    background: linear-gradient(#7d7871 0%, #595953 100%);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.btn-color {
+    background: #ea00ff;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.butt--exit {
+    background: linear-gradient(#f37458 0%, #de4c12 100%);
+}
+
+.user {
+    color: #d5d0ce;
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 15px;
+}
+  
+  
+  @keyframes curbl {
+  
+	0% {
+	  background: #ffffff;
+	}
+  
+	49% {
+	  background: #ffffff;
+	}
+  
+	60% {
+	  background: transparent;
+	}
+  
+	99% {
+	  background: transparent;
+	}
+  
+	100% {
+	  background: #ffffff;
+	}
+  }
+/*###################################################### SKILLS #######################################*/
 
 .skills {
-	padding-left: 3em;
+	padding-left: 1em;
 	background: transparent;
 	margin-bottom: 0;
 	margin-right: 3em;
 	color: white;
 }
 
-.skills img {
-	width: 50px;
-	height: 50px; 
+.container {
+	position: relative;
+	width: 100%;
+    height: 450px;
+	background: #3f3b3b;
+	padding: 8px;
+	border-radius: 5px;
+  }
+  
+  .container .skill-box {
+	width: 100%;
+	margin: 20px 0;
+  }
+  
+  .skill-box .title {
+	display: block;
+	font-size: 15px;
+	font-weight: 600;
+	color: #ff00ff;
+  }
+  
+  .skill-box .skill-bar {
+	height: 10px;
+	width: 100%;
+	border-radius: 6px;
+	margin-top: 6px;
+	background: rgba(0,0,0,0.1);
+  }
+  
+  .skill-bar .skill-per {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 900%;
+	border-radius: 6px;
+	background: #4070f4;
+	animation: progress 0.4s ease-in-out forwards;
+	opacity: 0;
+  }
+  
+  
+  .skill-per.c {
+		/*progreso de las diferentes lenguajes*/
+	width: 70%;
+	animation-delay: 0.2s;
+  }
+  
+  .skill-per.cpp {
+		/*progreso de las diferentes lenguajes*/
+	width: 50%;
+	animation-delay: 0.3s;
+  }
+  .skill-per.git {
+	/*progreso de las diferentes lenguajes*/
+   width: 50%;
+   animation-delay: 0.1s;
+ }
+ 
+ .skill-per.bash {
+		  /*progreso de las diferentes lenguajes*/
+   width: 40%;
+   animation-delay: 0.1s;
+ }
+ 
+ .skill-per.network {
+	   /*progreso de las diferentes lenguajes*/
+   width: 70%;
+   animation-delay: 0.2s;
+ }
+ 
+ .skill-per.html {
+	   /*progreso de las diferentes lenguajes*/
+   width: 30%;
+   animation-delay: 0.3s;
+ }
+
+ .skill-per.HW {
+	/*progreso de las diferentes lenguajes*/
+width: 80%;
+animation-delay: 0.3s;
+}
+  
+  
+  @keyframes progress {
+	0% {
+	  width: 0;
+	  opacity: 1;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  .skill-per .tooltip {
+	position: absolute;
+	right: -14px;
+	top: -28px;
+	font-size: 9px;
+	font-weight: 500;
+	color: #fff;
+	padding: 2px 6px;
+	border-radius: 3px;
+	background: #4070f4;
+	z-index: 1;
+  }
+  
+  .tooltip::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -2px;
+	height: 10px;
+	width: 10px;
+	z-index: -1;
+	background-color: #4070f4;
+	transform: translateX(-50%) rotate(45deg);
+  }
+  
+/*###################################################### HEADERS #######################################*/
+
+.header-content {
+    display: flex;
+	padding: 50px;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.header-text {
+    flex: 1;
+}
 
-header {
-	text-align: left;
-    position: relative;
-    padding-top: 2em;
-    margin-left: 1em;
-	margin-right: 1em;
-    margin-bottom: 0;
+.language-button {
+	padding: 0.1em 0.25em;
+	width: 13em;
+	height: 14.2em;
+	color: #ffffff;
+	background-color: #212121;
+	border: 0.08em solid #fff;
+	border-radius: 0.3em;
+	font-size: 22px;
+	cursor: pointer;
+  }
+  
+  .language-button span {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0.4em;
+	width: 8.25em;
+	height: 2.5em;
+	background-color: #212121;
+	border-radius: 0.2em;
+	font-size: 1.5em;
+	color: #fff;
+	border: 0.08em solid #fff;
+	box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  }
+  
+  .language-button span:hover {
+	transition: all 0.5s;
+	transform: translate(0, 0.4em);
+	box-shadow: 0 0 0 0 #fff;
+  }
+  
+  .language-button span:not(hover) {
+	transition: all 1s;
+  }
+  
+
+#profile-picture {
+    max-width: 450px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    border: 5px solid #333;
+    margin-left: 20px; /* Adjust the spacing as needed */
 }
 
 @keyframes glitch {
@@ -107,11 +415,16 @@ header {
 	100% {
 		text-shadow: none;
 	}
+
+}.purple-text {
+    color: purple;
 }
+
 
 h1 {
     font-size: 50px;
     color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
     margin-bottom: 0; /* This reduces the space below the h1 */
 }
 
@@ -122,10 +435,12 @@ h3 {
 }
 
 h4 {
-	font-size: 70px;
-	margin-top: 0; /* This reduces the space above the h3 */
-	color: rgb(60, 253, 179);
+    font-size: 70px;
+    margin-top: 0; /* This reduces the space above the h4 */
+    color: rgb(255, 0, 221);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
+
 h2 {
 	font-size: 30px;
 	color: rgb(60, 253, 179);
@@ -146,103 +461,8 @@ h2 {
 	height: auto; /* This maintains the aspect ratio of the image */
 }
 
-.buttonCV img {
-	height: 20px;
-	width: 20px;
-	filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(270deg);
-}
 
-.buttonCV {
-	transform: translateY(-50%);
-	background-color: #610061; /* Change this to your preferred color */
-	color: white; /* Change this to your preferred color */
-	border: 1px solid #448e9b00;
-	border-radius: 10px;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: background-color 0.3s ease;
-	margin: 0px;
-}
-
-.buttonCV:hover {
-	background-color: #005F7F; /* Change this to your preferred color */
-	animation: glitch 1s infinite;
-}
-
-/* Default button styles */
-.button, .buttonCV{
-	padding: 10px 30px;
-	font-size: 28px;
-}
-
-.home-button {
-	margin-left: 2em;
-	transform: translateY(-50%);
-	background-color: #610061; /* Change this to your preferred color */
-	color: white; /* Change this to your preferred color */
-	border: 1px solid #530546;
-	border-radius: 10px;
-	border-color: #000000;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: background-color 0.3s ease;
-	padding: 10px 30px;
-	font-size: 28px;
-}
-
-.home-button:hover {
-	background-color: #005F7F; /* Change this to your preferred color */
-	animation: glitch 1s infinite;
-}
-
-.button{
-	transform: translateY(-50%);
-	background-color: #610061; /* Change this to your preferred color */
-	color: white; /* Change this to your preferred color */
-	border: 1px solid #530546;
-	border-radius: 10px;
-	border-color: #000000;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: background-color 0.3s ease;
-}
-
-.button img{
-	height: 20px;
-	width: 20px;
-	vertical-align: middle;
-}
-
-.button:hover {
-	background-color: #005F7F; /* Change this to your preferred color */
-	animation: glitch 1s infinite;
-}
-
-.language-button {
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: #00be8f; /* Change to desired color */
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 100px;
-	font-size: 0.6em;
-    transition: background-color 0.3s ease;
-}
-
-.language-button:hover {
-    background-color: #001d5c; /* Change to desired hover color */
-}
-
-
-/* Responsive styles for screens smaller than 600px */
-@media (max-width: 600px) {
-	.button, .buttonCV, #prev, #next {
-		padding: 5px 10px;
-		font-size: 14px;
-	}
-}
-
+/*###################################################### PROJECT #######################################*/
 
 .project {
 	position: relative;
@@ -294,3 +514,208 @@ footer {
 	text-align: center;
 	padding: 10px;
 }
+
+
+
+/*###################################################### PROJECT BUTTON #######################################*/
+
+.home
+{
+	padding-left: 10px;
+}
+
+.cta {
+	display: flex;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 11px 33px;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	font-size: 25px;
+	color: white;
+	background: #6225e6;
+	transition: 1s;
+	box-shadow: 6px 6px 0 black;
+	transform: skewX(-15deg);
+	border: none;
+	cursor: pointer;
+  }
+  
+  .cta:focus {
+	outline: none;
+  }
+  
+  .cta:hover {
+	transition: 0.5s;
+	box-shadow: 10px 10px 0 #fbc638;
+  }
+  
+  .cta .second {
+	transition: 0.5s;
+	margin-right: 0px;
+  }
+  
+  .cta:hover .second {
+	transition: 0.5s;
+	margin-right: 45px;
+  }
+  
+  .span {
+	transform: skewX(15deg);
+  }
+  
+  .second {
+	width: 20px;
+	margin-left: 30px;
+	position: relative;
+	top: 12%;
+  }
+  
+  .one {
+	transition: 0.4s;
+	transform: translateX(-60%);
+  }
+  
+  .two {
+	transition: 0.5s;
+	transform: translateX(-30%);
+  }
+  
+  .cta:hover .three {
+	animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover .one {
+	transform: translateX(0%);
+	animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover .two {
+	transform: translateX(0%);
+	animation: color_anim 1s infinite 0.4s;
+  }
+  
+  @keyframes color_anim {
+	0% {
+	  fill: white;
+	}
+  
+	50% {
+	  fill: #fbc638;
+	}
+  
+	100% {
+	  fill: white;
+	}
+  }
+
+  /*###################################################### CONTACT  #######################################*/
+  #contact {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	background: transparent;
+	margin-bottom: 0;
+	color: white;
+}
+
+ul {
+	list-style: none;
+  }
+  
+  .example-2 {
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	flex-direction: row;
+	column-gap: 15rem;
+  }
+  .example-2 .icon-content {
+	margin-top:px;
+	margin: -50px;
+	position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+	position: absolute;
+	top: 20px;
+	left: 40%;
+	transform: translateX(50%);
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 5px;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 14px;
+	transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+	opacity: 1;
+	visibility: visible;
+	top: 5px;
+  }
+  .example-2 .icon-content a {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #4d4d4d;
+	background-color: #fff;
+	transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+	box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+	position: relative;
+	z-index: 1;
+	width: 30px;
+	height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+	color: white;
+  }
+  .example-2 .icon-content a .filled {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: #000;
+	transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+	height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+	background-color: #0274b3;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+	background-color: #24262a;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+	background: linear-gradient(
+	  45deg,
+	  #405de6,
+	  #5b51db,
+	  #b33ab4,
+	  #c135b4,
+	  #e1306c,
+	  #fd1f1f
+	);
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+	background-color: #ff0000;
+  }
+  
+  
