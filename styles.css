@@ -35,13 +35,33 @@ body {
 
 
 #profile-picture {
-	max-width: 100%;
-	height: auto;
-	border-radius: 50%;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-	border: 5px solid #333;
-	display: block;
-	margin: 0 auto; /* This will center the image */
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0rem;
+}
+
+@media (max-width: 1024px) {
+    #profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #profile-picture {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /*###################################################### ABOUT ME #######################################*/
@@ -413,6 +433,11 @@ animation-delay: 0.3s;
     color: purple;
 }
 
+h3 {
+	font-size: 20px;
+	margin-top: 0; /* This reduces the space above the h3 */
+	color: rgb(179, 16, 124);
+}
 
 h1 {
     font-size: 50px;
@@ -421,11 +446,7 @@ h1 {
     margin-bottom: 0; /* This reduces the space below the h1 */
 }
 
-h3 {
-	font-size: 20px;
-	margin-top: 0; /* This reduces the space above the h3 */
-	color: rgb(179, 16, 124);
-}
+
 
 h4 {
     font-size: 70px;
@@ -440,13 +461,24 @@ h2 {
 	text-shadow: #000000;
 }
 
-@media (max-width: 600px) {
-	h1 {
-		display: none;
-	}
-	h4 {
-		display: none;
-	}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
 }
 
 #contact img {
