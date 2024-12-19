@@ -1,29 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+	background: url("images/background.jpg");
+	background-size: cover;
+	background: blur(10px); /* Adjust the pixel value as needed */
+	background-position: center;
+	z-index: -1;
     position: relative;
     min-height: 100vh;
-    font-size: 2em;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 110%;
-    height: 110%;
-    background: url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px);
-    z-index: -1;
-}
-
-/* Add this to ensure content stays above blurred background */
-main, header, section {
-    position: relative;
-    z-index: 1;
+    font-size: 2em; /* Add this line */
 }
 
 @media (max-width: 800px) {
@@ -49,11 +34,11 @@ main, header, section {
 
 
 #profile-picture {
-	max-width: 90%;
+	max-width: 100%;
 	height: auto;
-	border-radius: 20%;
+	border-radius: 50%;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-	border: 2px solid #333;
+	border: 5px solid #333;
 	display: block;
 	margin: 0 auto; /* This will center the image */
 }
