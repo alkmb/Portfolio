@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-	background: url("images/background.jpg");
-	background-size: cover;
-	background: blur(10px); /* Adjust the pixel value as needed */
-	background-position: center;
-	z-index: -1;
+    font-family: 'Source Code ', monospace;
+    line-height: 1.3;
+    background: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
     position: relative;
     min-height: 100vh;
-    font-size: 2em; /* Add this line */
+    font-size: 2em;
 }
 
 @media (max-width: 800px) {
@@ -429,8 +430,8 @@ h3 {
 h4 {
     font-size: 70px;
     margin-top: 0; /* This reduces the space above the h4 */
-    color: rgb(255, 0, 221);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    color: rgb(255, 0, 212);
+    text-shadow: 8px 7px 1px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
 
 h2 {
@@ -457,22 +458,37 @@ h2 {
 /*###################################################### PROJECT #######################################*/
 
 .project {
-	position: relative;
-	flex: 1 0 21%; /* This will make each box take up approximately 1/4 of the container width, adjust as needed */
-	box-sizing: border-box;
-	margin: 10%;
-	padding: 10%;
-	background-color: #181142; /* This makes the background grey */
-	color: #ffffff; /* This makes the text white */
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	font-size: 14px; /* This makes the text smaller. Adjust as needed */
-	border-radius: 10px; /* Rounded corners */
+    position: relative;
+    flex: 1 0 300px; /* Base width for better responsiveness */
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: #181142;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px;
+    border-radius: 0; /* Remove rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-	background-color: #009688; /* New background color on hover */
-	transform: scale(1.03); /* Keep the scale transformation for a subtle effect */
-	box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Keep the enhanced shadow for depth */
+    background-color: #009688;
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Make projects more responsive */
+@media (max-width: 1200px) {
+    .project {
+        flex: 1 0 45%; /* 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 1 0 100%; /* 1 column */
+        margin: 1rem 0;
+    }
 }
 .github-logo{
 	width: 40px; /* This makes the logo smaller. Adjust as needed */
