@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: rgba(0, 0, 0, 1);
+	background: url("images/background.jpg");
     position: relative;
     min-height: 100vh;
     font-size: 2em; /* Add this line */
