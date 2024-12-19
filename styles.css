@@ -477,17 +477,23 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-/* Make projects more responsive */
-@media (max-width: 1200px) {
-    .project {
-        flex: 1 0 45%; /* 2 columns */
-    }
+.responsive-video {
+    width: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
     .project {
-        flex: 1 0 100%; /* 1 column */
+        min-width: 300px; /* Minimum width for project box */
         margin: 1rem 0;
+    }
+    
+    .responsive-video {
+        min-width: 280px; /* Slightly smaller than project box */
+        min-height: 160px;
     }
 }
 .github-logo{
